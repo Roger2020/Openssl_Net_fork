@@ -103,6 +103,7 @@ namespace OpenSSL.SSL
 			// Set the callbacks for remote cert verification and local cert selection
 			if (OnRemoteCertificate != null)
 			{
+				//SSL_VERIFY_NONE-不验证书
 				sslContext.SetVerify(
 					VerifyMode.SSL_VERIFY_PEER |
 					VerifyMode.SSL_VERIFY_FAIL_IF_NO_PEER_CERT, 

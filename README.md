@@ -2,12 +2,19 @@
 
 ### Description
 
-A managed [OpenSSL](https://www.openssl.org/) wrapper written in C# for the 2.0 .NET Framework that exposes both the [Crypto API](https://www.openssl.org/docs/crypto/crypto.html) and the [SSL API](https://www.openssl.org/docs/ssl/ssl.html).
+A managed [OpenSSL](https://www.openssl.org/) wrapper written in C# for the 4.5.2. .NET Framework that exposes both the [Crypto API](https://www.openssl.org/docs/crypto/crypto.html) and the [SSL API](https://www.openssl.org/docs/).
 
 This a must for .NET developers that need crypto but don't want to use Microsoft's SSPI.
 
 This wrapper is based on version 1.0.2a of libeay32.dll and ssleay32.dll.
 
+### Differences to [OpenSSL.net](https://github.com/openssl-net/openssl-net)
+The following differences compared to [OpenSSL.net](https://github.com/openssl-net/openssl-net) apply:
+ * new project & solution files for Visual Studio 2019
+ * add missing wrapper for `RSA_verify()` function
+ * add ssl test Project about oneway and twoway
+ *add some cert
+ 
 ### Wrapper Example
 
 The following is a partial example to show the general pattern of wrapping onto the C API.
